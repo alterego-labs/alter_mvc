@@ -6,6 +6,7 @@ module AlterMvc
   autoload :BasicPresenter,   'alter_mvc/model'
   autoload :BasicDomainLogic, 'alter_mvc/model'
   autoload :BasicQuery,       'alter_mvc/model'
+  autoload :Constants,        'alter_mvc/constants'
 
   module Concerns
 
