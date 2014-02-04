@@ -2,7 +2,10 @@ require "alter_mvc/version"
 
 module AlterMvc
 
-  autoload :Model, 'alter_mvc/model'
+  autoload :Model,            'alter_mvc/model'
+  autoload :BasicPresenter,   'alter_mvc/model'
+  autoload :BasicDomainLogic, 'alter_mvc/model'
+  autoload :BasicQuery,       'alter_mvc/model'
 
   module Concerns
 
