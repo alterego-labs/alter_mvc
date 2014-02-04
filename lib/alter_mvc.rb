@@ -1,5 +1,7 @@
 require "alter_mvc/version"
 
 module AlterMvc
-  # Your code goes here...
+
+  autoload :Model, 'alter_mvc/model'
+
 end
