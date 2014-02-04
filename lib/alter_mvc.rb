@@ -13,4 +13,10 @@ module AlterMvc
 
   end
 
+  module Extensions
+
+    autoload :CollectionRenderable, 'alter_mvc/extensions/collection_renderable'
+
+  end
+
 end
