@@ -6,8 +6,9 @@ module AlterMvc
   autoload :BasicPresenter,      'alter_mvc/basic_presenter'
   autoload :BasicServiceObject,  'alter_mvc/basic_service_object'
   autoload :BasicQuery,          'alter_mvc/basic_query'
-  autoload :Constants,           'alter_mvc/constants'
   autoload :BasicUseCase,        'alter_mvc/basic_use_case'
+  autoload :BasicResponder,      'alter_mvc/basic_responder'
+  autoload :Constants,           'alter_mvc/constants'
 
   module Concerns
 
@@ -15,6 +16,18 @@ module AlterMvc
     autoload :ServiceObjectable, 'alter_mvc/concerns/service_objectable'
     autoload :Presentable,       'alter_mvc/concerns/presentable'
     autoload :Querable,          'alter_mvc/concerns/querable'
+
+  end
+
+  module Presenters
+
+    autoload :Helper,            'alter_mvc/presenters/helper'
+
+  end
+
+  module Responders
+
+    autoload :Helper,            'alter_mvc/responders/helper'
 
   end
 
