@@ -10,6 +10,10 @@ This gem provides for you tools for extending Rails's MVC by next components:
 5. UseCase
 6. ParameterSanitizer
 
+At the next picture presented class diagram of my concept:
+
+![Class diagram of alter_mvc concept](https://github.com/alterego-labs/alter_mvc/raw/master/src/resources/alter_mvc.png "Class diagram of alter_mvc concept")
+
 ## Installation
 
 Add this line to your application's Gemfile:
