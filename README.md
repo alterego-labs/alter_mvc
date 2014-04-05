@@ -12,7 +12,7 @@ This gem provides for you tools for extending Rails's MVC by next components:
 
 At the next picture presented class diagram of my concept:
 
-![Class diagram of alter_mvc concept](https://github.com/alterego-labs/alter_mvc/master/lib/resources/alter_mvc.png "Class diagram of alter_mvc concept")
+![Class diagram of alter_mvc concept](https://github.com/alterego-labs/alter_mvc/raw/master/lib/resources/alter_mvc.png "Class diagram of alter_mvc concept")
 
 ## Installation
 
