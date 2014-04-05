@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = AlterMvc::VERSION
   spec.authors       = ["Sergey Gernyak"]
   spec.email         = ["sergeg1990@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = %q{Extending MVC concept by some useful modules}
+  spec.summary       = %q{Trying to fix some very known problems using MVC concept in Rails}
+  spec.homepage      = "https://github.com/alterego-labs/alter_mvc"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
