@@ -175,6 +175,16 @@ For adding new ParameterSanitizer run:
 $ rails generate alter_mvc:parameter_sanitizer PlacingBet
 ```
 
+### Validator
+
+Moving validation in additional layer helps us to hard-line divide between persistence layer and the actual domain logic.
+
+For adding new Validator run:
+
+```
+$ rails generate alter_mvc:validator DraftPost
+```
+
 ## Contributing
 
 1. Fork it
