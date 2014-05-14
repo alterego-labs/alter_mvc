@@ -2,13 +2,14 @@ require "alter_mvc/version"
 
 module AlterMvc
 
-  autoload :Model,               'alter_mvc/model'
-  autoload :BasicPresenter,      'alter_mvc/basic_presenter'
-  autoload :BasicServiceObject,  'alter_mvc/basic_service_object'
-  autoload :BasicQuery,          'alter_mvc/basic_query'
-  autoload :BasicUseCase,        'alter_mvc/basic_use_case'
-  autoload :BasicResponder,      'alter_mvc/basic_responder'
-  autoload :Constants,           'alter_mvc/constants'
+  autoload :Model,                   'alter_mvc/model'
+  autoload :BasicPresenter,          'alter_mvc/basic_presenter'
+  autoload :BasicServiceObject,      'alter_mvc/basic_service_object'
+  autoload :BasicQuery,              'alter_mvc/basic_query'
+  autoload :BasicUseCase,            'alter_mvc/basic_use_case'
+  autoload :BasicResponder,          'alter_mvc/basic_responder'
+  autoload :BasicParameterSanitizer, 'alter_mvc/basic_parameter_sanitizer'
+  autoload :Constants,               'alter_mvc/constants'
 
   module Concerns
 
@@ -29,6 +30,12 @@ module AlterMvc
 
     autoload :Helper,            'alter_mvc/responders/helper'
 
+  end
+
+  module ParameterSanitizers
+
+    autoload :Helper,            'alter_mvc/parameter_sanitizers/helper'
+    
   end
 
   module Extensions
