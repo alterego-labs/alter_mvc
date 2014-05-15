@@ -9,6 +9,7 @@ module AlterMvc
   autoload :BasicUseCase,            'alter_mvc/basic_use_case'
   autoload :BasicResponder,          'alter_mvc/basic_responder'
   autoload :BasicParameterSanitizer, 'alter_mvc/basic_parameter_sanitizer'
+  autoload :BasicValidator,          'alter_mvc/basic_validator'
   autoload :Constants,               'alter_mvc/constants'
 
   module Concerns
