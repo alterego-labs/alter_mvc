@@ -9,6 +9,7 @@ This gem provides for you tools for extending Rails's MVC by next components:
 4. Responder
 5. UseCase
 6. ParameterSanitizer
+7. Validator
 
 At the next picture presented class diagram of my concept:
 
