@@ -1,9 +1,9 @@
 require "responders"
-require 'alter_mvc/responders/helper'
+require 'alter_mvc/respondering/helper'
 
 module AlterMvc
   class BasicResponder < ActionController::Responder
-    include AlterMvc::Responders::Helper
+    include AlterMvc::Respondering::Helper
     include Responders::FlashResponder
 
     AlterMvc::Constants::VIEWABLE_ACTIONS.each do |action|

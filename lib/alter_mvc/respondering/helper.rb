@@ -1,4 +1,4 @@
-module AlterMvc::Responders::Helper
+module AlterMvc::Respondering::Helper
 
   def call_method
     send(dispatch_call_method) if has_process_method?

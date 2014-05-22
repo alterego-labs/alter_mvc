@@ -27,9 +27,9 @@ module AlterMvc
 
   end
 
-  module Responders
+  module Respondering
 
-    autoload :Helper,            'alter_mvc/responders/helper'
+    autoload :Helper,            'alter_mvc/respondering/helper'
 
   end
 
