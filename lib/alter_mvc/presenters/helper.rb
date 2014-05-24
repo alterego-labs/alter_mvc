@@ -4,8 +4,8 @@ module AlterMvc::Presenters::Helper
     view_context.render(build_render_params(name, options)).html_safe
   end
 
-  def build_rendering_params(as)
-    {partial: "#{view_namespace || resource_name.pluralize}/render/#{as}", locals: { :"#{resource_name}" => model }}
+  def build_rendering_params(as, options = {})
+    {partial: "#{view_namespace || resource_name.pluralize}/render/#{as}", locals: { :"#{resource_name}" => model }.merge(options)}
   end
 
   def build_render_params(name, options)

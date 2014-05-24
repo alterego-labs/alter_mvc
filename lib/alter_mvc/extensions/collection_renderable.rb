@@ -1,8 +1,8 @@
 module AlterMvc::Extensions::CollectionRenderable
 
   def rendering(as: nil, with: nil)
-    fetch_collection.inject(ActiveSupport::SafeBuffer.new) do |output, element|
-      output << element.rendering(as: as, with: with)
+    fetch_collection.each.with_index.inject(ActiveSupport::SafeBuffer.new) do |output, (element,index)|
+      output << element.rendering(as: as, with: with, options: {index: index})
     end
   end
 

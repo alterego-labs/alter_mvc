@@ -19,8 +19,8 @@ module AlterMvc
       collection.map { |c| new(c) }
     end
 
-    def rendering(as: nil, with: nil)
-      render_view "", with, build_rendering_params(as)
+    def rendering(as: nil, with: nil, options: {})
+      render_view "", with, build_rendering_params(as, options)
     end
 
   end
