@@ -3,7 +3,7 @@ require "alter_mvc/version"
 module AlterMvc
 
   autoload :Presenter,          'alter_mvc/presenter'
-  autoload :ServiceObject,      'alter_mvc/service_object'
+  autoload :Service,            'alter_mvc/service'
   autoload :Query,              'alter_mvc/query'
   autoload :UseCase,            'alter_mvc/use_case'
   autoload :Responder,          'alter_mvc/responder'
@@ -46,7 +46,8 @@ module AlterMvc
 
   module Helpers
   
-    autoload :BaseCommand, 'alter_mvc/helpers/base_command'
+    autoload :BaseCommand,  'alter_mvc/helpers/base_command'
+    autoload :ModelConcern, 'alter_mvc/helpers/model_concern'
 
   end
 
