@@ -19,6 +19,16 @@ module AlterMvc
       collection.map { |c| new(c) }
     end
 
+    def self.draw(name, &block)
+      define_method "draw_#{name}" do
+        instance_eval &block
+      end
+    end
+
+    def method_missing(meth, *args, &blk)
+      model.send meth, *args
+    end
+
     def rendering(as: nil, with: nil, options: {})
       render_view "", with, build_rendering_params(as, options)
     end
