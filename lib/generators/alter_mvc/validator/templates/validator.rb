@@ -1,2 +1,2 @@
-class <%= class_name %>Validator < AlterMvc::BasicValidator
+class <%= class_name %>Validator < AlterMvc::Validator
 end

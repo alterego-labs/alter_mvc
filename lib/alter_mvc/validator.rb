@@ -2,7 +2,7 @@ require 'delegate'
 require 'active_model'
 
 module AlterMvc
-  class BasicValidator < SimpleDelegator
+  class Validator < SimpleDelegator
     include ActiveModel::Validations
 
     alias :model :__getobj__

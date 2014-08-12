@@ -2,7 +2,7 @@ require 'delegate'
 require 'alter_mvc/presenters/helper'
 
 module AlterMvc
-  class BasicPresenter < SimpleDelegator
+  class Presenter < SimpleDelegator
     include AlterMvc::Presenters::Helper
 
     alias :model :__getobj__

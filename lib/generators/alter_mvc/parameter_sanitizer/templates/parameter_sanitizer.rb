@@ -1,3 +1,3 @@
-class <%= class_name %>ParameterSanitizer < AlterMvc::BasicParameterSanitizer
+class <%= class_name %>ParameterSanitizer < AlterMvc::ParameterSanitizer
 end
 

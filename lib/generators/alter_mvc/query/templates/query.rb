@@ -1,2 +1,2 @@
-class <%= class_name %>Query < AlterMvc::BasicQuery
+class <%= class_name %>Query < AlterMvc::Query
 end

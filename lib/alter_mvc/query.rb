@@ -1,7 +1,7 @@
 require 'delegate'
 
 module AlterMvc
-  class BasicService < SimpleDelegator
+  class Query < SimpleDelegator
 
     alias :model :__getobj__
 
@@ -9,9 +9,13 @@ module AlterMvc
       super(base || self.class.default_base)
     end
 
+    def self.method_missing(meth, *args, &blk)
+      self.new(default_base).send meth, *args
+    end
+
     private
     def self.default_base
-      @_model_class ||= self.name.gsub("Service", "").constantize.unscoped
+      @_model_class ||= self.name.gsub("Query", "").constantize.unscoped
     end
 
   end

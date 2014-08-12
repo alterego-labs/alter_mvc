@@ -1,2 +1,2 @@
-class <%= class_name %>Service < AlterMvc::BasicService
+class <%= class_name %>Service < AlterMvc::Service
 end

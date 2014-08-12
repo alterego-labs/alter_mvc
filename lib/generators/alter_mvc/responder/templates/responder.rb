@@ -1,2 +1,2 @@
-class <%= class_name %>Responder < AlterMvc::BasicResponder
+class <%= class_name %>Responder < AlterMvc::Responder
 end

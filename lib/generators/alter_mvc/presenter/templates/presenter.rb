@@ -1,2 +1,2 @@
-class <%= class_name %>Presenter < AlterMvc::BasicPresenter
+class <%= class_name %>Presenter < AlterMvc::Presenter
 end

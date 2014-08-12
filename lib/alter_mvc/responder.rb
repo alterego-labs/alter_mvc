@@ -2,7 +2,7 @@ require "responders"
 require 'alter_mvc/respondering/helper'
 
 module AlterMvc
-  class BasicResponder < ActionController::Responder
+  class Responder < ActionController::Responder
     include AlterMvc::Respondering::Helper
     include Responders::FlashResponder
 
