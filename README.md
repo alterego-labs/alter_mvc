@@ -19,7 +19,7 @@ At the next picture presented class diagram of my concept:
 
 Add this line to your application's Gemfile:
 
-    gem 'alter_mvc'
+    gem 'alter_mvc', '0.1.0'
 
 And then execute:
 
@@ -185,6 +185,14 @@ For adding new Validator run:
 ```
 $ rails generate alter_mvc:validator DraftPost
 ```
+
+## CHANGES IN 0.1.0
+
+1. Added ParameterSanitizer layer
+2. Added Validator layer
+3. Passing index to partial when rendering collection
+4. Added options to collection rendering
+5. Fixed bugs, refactoring and testing
 
 ## Contributing
 
