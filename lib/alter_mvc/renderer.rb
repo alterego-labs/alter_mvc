@@ -5,8 +5,8 @@ module AlterMvc
     include AlterMvc::Helpers::Renderer
     include AlterMvc::Helpers::ModelConcern
 
-    def self.draw(name, *args, &block)
-      define_method "draw_#{name}" do |*args|
+    def self.render(name, *args, &block)
+      define_method "render_#{name}" do |*args|
         instance_exec *args, &block
       end
     end
