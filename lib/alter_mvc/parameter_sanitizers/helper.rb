@@ -1,3 +1,4 @@
+require 'pry'
 module AlterMvc::ParameterSanitizers::Helper
 
   def self.included(base)
@@ -7,7 +8,7 @@ module AlterMvc::ParameterSanitizers::Helper
   module ClassMethods
 
     def resource(resource)
-      if resource.class.is_a? Hash
+      if resource.is_a? Hash
         define_fetch_params_method resource.keys.first, resource.values.first
       else
         define_fetch_params_method resource

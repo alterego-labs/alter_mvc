@@ -6,7 +6,7 @@ module AlterMvc
         params.each { |k, v| instance_variable_set("@#{k}", v) }
       end
 
-      def execute
+      def run
         raise 'Must be implemented!'
       end
       

@@ -11,6 +11,7 @@ module AlterMvc
   autoload :ParameterSanitizer, 'alter_mvc/parameter_sanitizer'
   autoload :Validator,          'alter_mvc/validator'
   autoload :Constants,          'alter_mvc/constants'
+  autoload :Command,            'alter_mvc/command'
 
   module Concerns
 
