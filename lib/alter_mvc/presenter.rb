@@ -6,9 +6,9 @@ module AlterMvc
     include AlterMvc::Presenters::Helper
     include AlterMvc::Helpers::ModelConcern
 
-    def self.draw(name, &block)
-      define_method "draw_#{name}" do
-        instance_eval &block
+    def self.draw(name, *args, &block)
+      define_method "draw_#{name}" do |*args|
+        instance_exec *args, &block
       end
     end
 

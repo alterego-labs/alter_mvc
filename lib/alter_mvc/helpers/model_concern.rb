@@ -3,7 +3,7 @@ module AlterMvc
     module ModelConcern
       
       alias :model :__getobj__
-      
+
       def self.included(base)
         base.send :extend, ClassMethods
       end
@@ -18,13 +18,13 @@ module AlterMvc
 
       module ClassMethods
         
-      private
+      protected
 
         def default_base
-          @_model_class ||= model_name.constantize.unscoped
+          @_model_class ||= resource_name.constantize.unscoped
         end
 
-        def model_name
+        def resource_name
           self.name.gsub /[A-Z][a-z0-9]+$/, ""
         end
 
