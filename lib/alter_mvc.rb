@@ -3,6 +3,7 @@ require "alter_mvc/version"
 module AlterMvc
 
   autoload :Presenter,          'alter_mvc/presenter'
+  autoload :Renderer,           'alter_mvc/renderer'
   autoload :Service,            'alter_mvc/service'
   autoload :Query,              'alter_mvc/query'
   autoload :UseCase,            'alter_mvc/use_case'
@@ -17,12 +18,6 @@ module AlterMvc
     autoload :Servicable,   'alter_mvc/concerns/servicable'
     autoload :Presentable,  'alter_mvc/concerns/presentable'
     autoload :Querable,     'alter_mvc/concerns/querable'
-
-  end
-
-  module Presenters
-
-    autoload :Helper,            'alter_mvc/presenters/helper'
 
   end
 
@@ -48,6 +43,7 @@ module AlterMvc
   
     autoload :BaseCommand,  'alter_mvc/helpers/base_command'
     autoload :ModelConcern, 'alter_mvc/helpers/model_concern'
+    autoload :Renderer,     'alter_mvc/helpers/renderer'
 
   end
 

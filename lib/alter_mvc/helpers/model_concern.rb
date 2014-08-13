@@ -28,6 +28,10 @@ module AlterMvc
           self.name.gsub /[A-Z][a-z0-9]+$/, ""
         end
 
+        def extension_type
+          self.name.scan(/[A-Z][a-z0-9]+/).last.downcase
+        end
+
       end
 
     end
