@@ -1,11 +1,10 @@
 module AlterMvc
   module Helpers
     module ModelConcern
-      
-      alias :model :__getobj__
 
       def self.included(base)
         base.send :extend, ClassMethods
+        base.send :class_eval, "alias :model :__getobj__"
       end
 
       def initialize(base = nil)
