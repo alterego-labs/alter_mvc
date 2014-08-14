@@ -17,7 +17,7 @@ describe AlterMvc::Renderer do
 
   context 'self rendering' do
     
-    before { expect(renderer).to receive(:render_view).and_return 'render result' }
+    before { expect(renderer).to receive(:render).and_return 'render result' }
 
     When(:result) { renderer.rendering(as: :some) }
     Then { result == 'render result' }

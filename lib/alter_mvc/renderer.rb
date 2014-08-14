@@ -11,8 +11,8 @@ module AlterMvc
       end
     end
 
-    def rendering(as: nil, with: nil, options: {})
-      render_view "", with, build_rendering_params(as, options)
+    def rendering(as: nil, options: {})
+      render "", rendering_opts(as, options)
     end
 
   end
