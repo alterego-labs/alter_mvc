@@ -43,10 +43,11 @@ module AlterMvc
 
   module Helpers
   
-    autoload :BaseCommand,  'alter_mvc/helpers/base_command'
-    autoload :ModelConcern, 'alter_mvc/helpers/model_concern'
-    autoload :Renderer,     'alter_mvc/helpers/renderer'
-    autoload :Controller,   'alter_mvc/helpers/controller'
+    autoload :BaseCommand,      'alter_mvc/helpers/base_command'
+    autoload :ModelConcern,     'alter_mvc/helpers/model_concern'
+    autoload :Renderer,         'alter_mvc/helpers/renderer'
+    autoload :Controller,       'alter_mvc/helpers/controller'
+    autoload :RenderParameters, 'alter_mvc/helpers/render_parameters'
 
   end
 
