@@ -12,6 +12,7 @@ module AlterMvc
   autoload :Validator,          'alter_mvc/validator'
   autoload :Constants,          'alter_mvc/constants'
   autoload :Command,            'alter_mvc/command'
+  autoload :Config,             'alter_mvc/config'
 
   module Concerns
 
@@ -45,6 +46,7 @@ module AlterMvc
     autoload :BaseCommand,  'alter_mvc/helpers/base_command'
     autoload :ModelConcern, 'alter_mvc/helpers/model_concern'
     autoload :Renderer,     'alter_mvc/helpers/renderer'
+    autoload :Controller,   'alter_mvc/helpers/controller'
 
   end
 
