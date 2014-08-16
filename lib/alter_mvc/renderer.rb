@@ -15,5 +15,11 @@ module AlterMvc
       render "", rendering_opts(as, options)
     end
 
+  protected
+
+    def default_action(name, *args)
+      render name
+    end
+
   end
 end

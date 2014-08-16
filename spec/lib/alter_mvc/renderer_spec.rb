@@ -4,7 +4,8 @@ class SomeRenderer < AlterMvc::Renderer; end
 
 describe AlterMvc::Renderer do
   
-  Given(:model)    { double(:model) }
+  Given(:render)   { SomeRenderer.new(double) }
+  Given(:model)    { double(:model, renderer: render) }
   Given(:renderer) { SomeRenderer.new(model) }
 
   context 'defining render methods' do
@@ -21,6 +22,15 @@ describe AlterMvc::Renderer do
 
     When(:result) { renderer.rendering(as: :some) }
     Then { result == 'render result' }
+
+  end
+
+  context 'rendering by default' do
+
+    before { expect(render).to receive(:render).with(:default_value).and_return 'default value' }
+    
+    When(:result) { renderer.render_default_value }
+    Then          { result == 'default value' }
 
   end
 

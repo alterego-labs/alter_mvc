@@ -12,7 +12,7 @@ module AlterMvc
       end
 
       def method_missing(meth, *args, &blk)
-        model.send meth, *args
+        AlterMvc::Helpers::MethodDispatcher.new(self, model).call meth, *args
       end
 
       module ClassMethods

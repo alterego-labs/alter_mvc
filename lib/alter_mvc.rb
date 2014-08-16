@@ -48,6 +48,7 @@ module AlterMvc
     autoload :Renderer,         'alter_mvc/helpers/renderer'
     autoload :Controller,       'alter_mvc/helpers/controller'
     autoload :RenderParameters, 'alter_mvc/helpers/render_parameters'
+    autoload :MethodDispatcher, 'alter_mvc/helpers/method_dispatcher'
 
   end
 

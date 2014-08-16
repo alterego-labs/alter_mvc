@@ -1,3 +1,5 @@
+require 'active_support/core_ext/string/inflections'
+
 module AlterMvc
   module Helpers
     class RenderParameters
