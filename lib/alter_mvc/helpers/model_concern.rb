@@ -1,3 +1,5 @@
+require 'active_support/core_ext/string/inflections'
+
 module AlterMvc
   module Helpers
     module ModelConcern
@@ -17,11 +19,11 @@ module AlterMvc
 
       module ClassMethods
         
-      protected
-
         def default_base
-          @_model_class ||= resource_name.constantize.unscoped
+          @_model_class ||= resource_name.constantize
         end
+
+      protected
 
         def resource_name
           self.name.gsub /[A-Z][a-z0-9]+$/, ""
