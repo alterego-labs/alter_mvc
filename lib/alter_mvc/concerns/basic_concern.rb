@@ -16,7 +16,7 @@ module AlterMvc::Concerns::BasicConcern
       end
       private
       def create_#{name}
-        \"\#{self.class.name.demodulize}#{name.to_s.classify}\".constantize.new self
+        \"\#{self.class.name}#{name.to_s.classify}\".constantize.new self
       end
     "
     class_eval(eval_string)
