@@ -15,7 +15,7 @@ module AlterMvc
 
     private
     def self.default_base
-      @_model_class ||= self.name.gsub("Query", "").constantize.unscoped
+      @_model_class ||= self.name.gsub("Query", "").constantize
     end
 
   end

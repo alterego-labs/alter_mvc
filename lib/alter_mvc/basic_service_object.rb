@@ -11,7 +11,7 @@ module AlterMvc
 
     private
     def self.default_base
-      @_model_class ||= self.name.gsub("ServiceObject", "").constantize.unscoped
+      @_model_class ||= self.name.gsub("ServiceObject", "").constantize
     end
 
   end
