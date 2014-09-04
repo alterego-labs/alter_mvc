@@ -2,8 +2,8 @@ require 'active_support/core_ext/string/inflections'
 
 module AlterMvc
   module Helpers
+    # Parameter generator for model renderer
     class RenderParameters
-      
       attr_reader :model
 
       def initialize(model)
@@ -18,7 +18,7 @@ module AlterMvc
         render_params self_view_path(name), options
       end
 
-    private
+      private
 
       def resource_name
         model.class.name.underscore.gsub('_presenter', '')
@@ -40,14 +40,21 @@ module AlterMvc
         "#{plural_resource_name}/render/#{name}"
       end
 
-      def render_params(partial_name, options = {})
-        {partial: partial_name}.merge opts_with_resource(options)
+      def render_params(partial, options = {})
+        partial_opts(partial).merge opts_with_resource(options)
       end
 
       def opts_with_resource(options = {})
-        {locals: { :"#{resource_name}" => model }.merge(options)}
+        { locals: resource_opts.merge(options) }
       end
 
+      def partial_opts(name)
+        { partial: name }
+      end
+
+      def resource_opts
+        { :"#{resource_name}" => model }
+      end
     end
   end
 end

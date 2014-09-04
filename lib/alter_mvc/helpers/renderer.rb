@@ -1,8 +1,7 @@
 module AlterMvc
   module Helpers
     module Renderer
-
-    protected
+      protected
 
       def render(template, options = {})
         render_context.render(render_opts(template, options)).html_safe
@@ -23,7 +22,6 @@ module AlterMvc
       def render_params
         @_render_params ||= AlterMvc::Helpers::RenderParameters.new(model)
       end
-        
     end
   end
 end
