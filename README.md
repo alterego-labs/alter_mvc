@@ -1,5 +1,8 @@
 # AlterMvc
 
+[![Code Climate](https://codeclimate.com/github/alterego-labs/alter_mvc/badges/gpa.svg)](https://codeclimate.com/github/alterego-labs/alter_mvc)
+[![Test Coverage](https://codeclimate.com/github/alterego-labs/alter_mvc/badges/coverage.svg)](https://codeclimate.com/github/alterego-labs/alter_mvc)
+
 MVC concept was described in 1979 by Trygve Reenskaugom and despite the fact that the first reviews were not very positive, it finds its use to this day. Concept improved and complemented with new followers, depending on the capabilities of the platform and language, but the essence remains the same - to share data submission and processing of user actions on the individual components. Features of this separation become reuse and loose coupling components. But the more we dive into the Rails more feel imperfection MVC.
 This gem provides for you tools for extending Rails's MVC by next components:
 
