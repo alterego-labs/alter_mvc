@@ -10,7 +10,6 @@ module AlterMvc
   autoload :Responder,          'alter_mvc/responder'
   autoload :ParameterSanitizer, 'alter_mvc/parameter_sanitizer'
   autoload :Validator,          'alter_mvc/validator'
-  autoload :Constants,          'alter_mvc/constants'
   autoload :Command,            'alter_mvc/command'
   autoload :Config,             'alter_mvc/config'
 

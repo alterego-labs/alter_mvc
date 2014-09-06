@@ -1,19 +1,20 @@
-require "responders"
+require 'responders'
 require 'alter_mvc/respondering/helper'
 
 module AlterMvc
+  # Responsible for exposing a resource to different mime requests,
+  # usually depending on the HTTP verb. The responder is triggered when
+  # <code>respond_with</code> is called.
   class Responder < ActionController::Responder
     include AlterMvc::Respondering::Helper
     include Responders::FlashResponder
 
-    AlterMvc::Constants::VIEWABLE_ACTIONS.each do |action|
-      define_method "#{action}_js" do render action end
-      define_method "#{action}_html" do render action end
+    def to_html
+      run_responder
     end
 
-    AlterMvc::Constants::RESPONDER_TYPES.each do |type|
-      define_method "to_#{type}" do run_responder end
+    def to_js
+      run_responder
     end
-
   end
 end
