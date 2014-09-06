@@ -29,4 +29,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec-given",    "3.5.4"
   spec.add_development_dependency "rspec-its",      "1.0.1"
   spec.add_development_dependency "pry-nav",        "0.2.3"
+  spec.add_development_dependency "codeclimate-test-reporter",        "0.4.0"
 end
