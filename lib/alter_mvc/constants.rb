@@ -2,6 +2,6 @@ module AlterMvc::Constants
 
   VIEWABLE_ACTIONS = %w{new show edit}
 
-  RESPONDER_TYPES = %w{html js}
+  RESPONDER_TYPES = %w{html js json}
 
 end
