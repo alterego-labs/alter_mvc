@@ -12,7 +12,8 @@ module AlterMvc
     end
 
     AlterMvc::Constants::RESPONDER_TYPES.each do |type|
-      define_method "to_#{type}" do run_responder end
+      alias_method "base_to_#{type}", "to_#{type}"
+      define_method "to_#{type}" do run_responder(type) end
     end
 
   end

@@ -9,7 +9,7 @@ module AlterMvc::Respondering::Helper
   end
 
   def dispatch_type
-    controller.request.xhr? ? :js : :html
+    controller.request.format.symbol
   end
 
   def dispatch_call_method
@@ -32,9 +32,9 @@ module AlterMvc::Respondering::Helper
     set_flash :error, message
   end
 
-  def run_responder
+  def run_responder(type)
     call_method
-    super unless has_process_method?
+    send("base_to_#{type}") unless has_process_method?
   end
 
 end
