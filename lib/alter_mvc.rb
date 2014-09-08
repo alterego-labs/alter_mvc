@@ -1,4 +1,4 @@
-require "alter_mvc/version"
+require 'alter_mvc/version'
 
 module AlterMvc
 
@@ -22,12 +22,6 @@ module AlterMvc
 
   end
 
-  module Respondering
-
-    autoload :Helper,            'alter_mvc/respondering/helper'
-
-  end
-
   module ParameterSanitizers
 
     autoload :Helper,            'alter_mvc/parameter_sanitizers/helper'
@@ -48,6 +42,7 @@ module AlterMvc
     autoload :Controller,       'alter_mvc/helpers/controller'
     autoload :RenderParameters, 'alter_mvc/helpers/render_parameters'
     autoload :MethodDispatcher, 'alter_mvc/helpers/method_dispatcher'
+    autoload :ResponderController, 'alter_mvc/helpers/responder_controller'
 
   end
 
