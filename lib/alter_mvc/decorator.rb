@@ -1,7 +1,7 @@
 require 'delegate'
 
 module AlterMvc
-  class Presenter < SimpleDelegator
+  class Decorator < SimpleDelegator
     include AlterMvc::Helpers::ModelConcern
 
     def self.draw(name, *args, &block)

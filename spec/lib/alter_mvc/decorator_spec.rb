@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-class SomePresenter < AlterMvc::Presenter
+class SomeDecorator < AlterMvc::Decorator
   
   draw :some_value do
     "decorated_#{some_value}"
@@ -8,14 +8,14 @@ class SomePresenter < AlterMvc::Presenter
 
 end
 
-describe AlterMvc::Presenter do
+describe AlterMvc::Decorator do
   
   Given(:model)     { double(:model, some_value: 'some_value') }
-  Given(:presenter) { SomePresenter.new(model) }
+  Given(:decorator) { SomeDecorator.new(model) }
 
   context 'calling defined draw method' do
     
-    When(:result) { presenter.draw_some_value }
+    When(:result) { decorator.draw_some_value }
     Then { result == 'decorated_some_value' }
 
   end

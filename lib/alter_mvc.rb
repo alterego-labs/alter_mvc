@@ -2,12 +2,11 @@ require 'alter_mvc/version'
 
 module AlterMvc
 
-  autoload :Presenter,          'alter_mvc/presenter'
+  autoload :Decorator,          'alter_mvc/decorator'
   autoload :Renderer,           'alter_mvc/renderer'
   autoload :Service,            'alter_mvc/service'
   autoload :Query,              'alter_mvc/query'
   autoload :UseCase,            'alter_mvc/use_case'
-  autoload :Responder,          'alter_mvc/responder'
   autoload :ParameterSanitizer, 'alter_mvc/parameter_sanitizer'
   autoload :Validator,          'alter_mvc/validator'
   autoload :Command,            'alter_mvc/command'
@@ -17,7 +16,7 @@ module AlterMvc
 
     autoload :BasicConcern, 'alter_mvc/concerns/basic_concern'
     autoload :Servicable,   'alter_mvc/concerns/servicable'
-    autoload :Presentable,  'alter_mvc/concerns/presentable'
+    autoload :Decorable,    'alter_mvc/concerns/decorable'
     autoload :Querable,     'alter_mvc/concerns/querable'
 
   end
@@ -42,7 +41,6 @@ module AlterMvc
     autoload :Controller,       'alter_mvc/helpers/controller'
     autoload :RenderParameters, 'alter_mvc/helpers/render_parameters'
     autoload :MethodDispatcher, 'alter_mvc/helpers/method_dispatcher'
-    autoload :ResponderController, 'alter_mvc/helpers/responder_controller'
 
   end
 
