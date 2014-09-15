@@ -35,12 +35,13 @@ module AlterMvc
 
   module Helpers
   
-    autoload :BaseCommand,      'alter_mvc/helpers/base_command'
-    autoload :ModelConcern,     'alter_mvc/helpers/model_concern'
-    autoload :Renderer,         'alter_mvc/helpers/renderer'
-    autoload :Controller,       'alter_mvc/helpers/controller'
-    autoload :RenderParameters, 'alter_mvc/helpers/render_parameters'
-    autoload :MethodDispatcher, 'alter_mvc/helpers/method_dispatcher'
+    autoload :BaseCommand,       'alter_mvc/helpers/base_command'
+    autoload :ModelConcern,      'alter_mvc/helpers/model_concern'
+    autoload :Renderer,          'alter_mvc/helpers/renderer'
+    autoload :Controller,        'alter_mvc/helpers/controller'
+    autoload :RenderParameters,  'alter_mvc/helpers/render_parameters'
+    autoload :MethodDispatcher,  'alter_mvc/helpers/method_dispatcher'
+    autoload :ValidationMessageConstructor, 'alter_mvc/helpers/validation_message_constructor'
 
   end
 
