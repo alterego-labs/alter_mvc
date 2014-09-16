@@ -3,6 +3,9 @@ require 'i18n'
 
 module AlterMvc
   module Helpers
+    ##
+    # Decides how to construct error messages in validator
+    #
     class ValidationMessageConstructor
       attr_reader :klass, :message
 
