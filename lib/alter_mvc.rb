@@ -38,10 +38,16 @@ module AlterMvc
     autoload :BaseCommand,       'alter_mvc/helpers/base_command'
     autoload :ModelConcern,      'alter_mvc/helpers/model_concern'
     autoload :Renderer,          'alter_mvc/helpers/renderer'
-    autoload :Controller,        'alter_mvc/helpers/controller'
     autoload :RenderParameters,  'alter_mvc/helpers/render_parameters'
     autoload :MethodDispatcher,  'alter_mvc/helpers/method_dispatcher'
     autoload :ValidationMessageConstructor, 'alter_mvc/helpers/validation_message_constructor'
+
+    module Controller
+
+      autoload :SettingRenderContext, 'alter_mvc/helpers/controller/setting_render_context'
+      autoload :ParamsConventions, 'alter_mvc/helpers/controller/params_conventions'
+      
+    end
 
   end
 

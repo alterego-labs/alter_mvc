@@ -2,12 +2,12 @@ require 'spec_helper'
 require 'active_record'
 require 'active_model'
 
-class User < AlterMvc::Helpers::BaseCommand
+class User
   attr_reader :password, :errors
 
-  def initialize(*args)
+  def initialize(params = {})
     @errors = ActiveModel::Errors.new(self)
-    super *args
+    params.each { |k, v| instance_variable_set("@#{k}", v) }
   end
 end
 
