@@ -40,13 +40,29 @@ module AlterMvc
     autoload :Renderer,          'alter_mvc/helpers/renderer'
     autoload :RenderParameters,  'alter_mvc/helpers/render_parameters'
     autoload :MethodDispatcher,  'alter_mvc/helpers/method_dispatcher'
-    autoload :ValidationMessageConstructor, 'alter_mvc/helpers/validation_message_constructor'
+    
 
     module Controller
 
       autoload :SettingRenderContext, 'alter_mvc/helpers/controller/setting_render_context'
       autoload :ParamsConventions, 'alter_mvc/helpers/controller/params_conventions'
       
+    end
+
+    module Validator
+      
+      autoload :AssociationValidation, 'alter_mvc/helpers/validator/association_validation'
+      autoload :ErrorMessageConstructor, 'alter_mvc/helpers/validator/error_message_constructor'
+
+      module Associations
+
+        autoload :BaseAssociation, 'alter_mvc/helpers/validator/associations/base_association'
+        autoload :Builder, 'alter_mvc/helpers/validator/associations/builder'
+        autoload :PluralAssociation, 'alter_mvc/helpers/validator/associations/plural_association'
+        autoload :SingularAssociation, 'alter_mvc/helpers/validator/associations/singular_association'
+
+      end
+
     end
 
   end

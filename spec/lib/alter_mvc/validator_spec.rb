@@ -13,7 +13,6 @@ end
 
 class TestingValidator < AlterMvc::Validator
   validate :password_presence
-
   def password_presence
     add_error('Some error') if model.password.blank?
   end

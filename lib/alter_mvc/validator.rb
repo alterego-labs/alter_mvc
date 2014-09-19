@@ -1,5 +1,6 @@
 require 'delegate'
 require 'active_model'
+require 'active_support/core_ext/module/delegation'
 
 module AlterMvc
   ##
@@ -20,13 +21,17 @@ module AlterMvc
   # # is_valid = UserSignUpValidator.new(new_user).valid?
   class Validator < SimpleDelegator
     include ActiveModel::Validations
+    include AlterMvc::Helpers::Validator::AssociationValidation
 
     alias_method :model, :__getobj__
 
-    private
+    delegate :errors, to: :model
+    delegate :messages,
+             :full_messages,
+             to: :errors, prefix: true
 
-    def errors
-      model.errors
+    def method_missing(name, *args, &block)
+      model.send name, *args, &block
     end
 
     def add_error(message, scope: :base)
@@ -34,7 +39,8 @@ module AlterMvc
     end
 
     def construct_message(message)
-      Helpers::ValidationMessageConstructor.new(self.class, message).construct
+      Helpers::Validator::ErrorMessageConstructor.new(self.class, message)
+        .construct
     end
   end
 end

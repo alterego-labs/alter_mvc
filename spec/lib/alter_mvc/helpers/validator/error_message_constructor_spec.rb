@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'i18n'
 
 I18n.backend.store_translations :en, some_validator: {
   errors:{
@@ -9,7 +10,7 @@ I18n.backend.store_translations :en, some_validator: {
 class SomeValidator
 end
 
-describe AlterMvc::Helpers::ValidationMessageConstructor do
+describe AlterMvc::Helpers::Validator::ErrorMessageConstructor do
   
   Given(:messanger) { described_class.new(SomeValidator, message) }
 
