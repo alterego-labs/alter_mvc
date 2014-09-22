@@ -9,6 +9,10 @@ class User
     @errors = ActiveModel::Errors.new(self)
     params.each { |k, v| instance_variable_set("@#{k}", v) }
   end
+
+  def comments
+    []
+  end
 end
 
 class TestingValidator < AlterMvc::Validator

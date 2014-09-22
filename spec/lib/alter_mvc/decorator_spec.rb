@@ -14,10 +14,7 @@ describe AlterMvc::Decorator do
   Given(:decorator) { SomeDecorator.new(model) }
 
   context 'calling defined draw method' do
-    
     When(:result) { decorator.draw_some_value }
     Then { result == 'decorated_some_value' }
-
   end
-
 end
