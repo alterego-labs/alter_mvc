@@ -33,6 +33,32 @@ Or install it yourself as:
 
     $ gem install alter_mvc
 
+## New in 1.0.0!
+
+Version 1.0.0 is not compatible with previous ones. There is a list of
+changes below:
+
+* RENAME _ServiceObject_ to _Service_
+* RENAME _Presenter_ to _Decorator_
+* REMOVE _Basic_ prefix from components names
+* REMOVE _Responder_ component
+* ADD _Command_ component
+* ADD _Renderer_ component
+* ADD ability for validating associations
+* MOVE component's instances to namespace according owner's namespace
+* CONVENTION for constructing params sanitizers in controller
+* CONVENTION for constructing validation messages in Validator component
+* CONVENTION for defining _draw_ methods in Decorator component
+* CONVENTION for defining _render_ methods in Renderer component
+* CONVENTION for implicitly passing object instance to Renderer's render
+  partial
+* CONVENTION for implicitly rendering object's shared partial
+* CONVENTION for implicitly setting render context for Renderer
+* CHANGE Renderer API for render shared view from `render_view` to
+  `render` without passing context
+* Many refactoring
+* Some testing and code documentation
+
 ## Usage
 
 ### ModelQuery
